@@ -5,7 +5,7 @@
 <br>
 
 
-### this repo inspired by sanjay godawat :green_heart: and :star: the Repo to SUPPORT 
+## This Repo Inspired By ``` SANJAY GODAWAT ```  :green_heart: and :star: the Repo To SUPPORT
 - [@sanjay](https://github.com/sanjaygodawat0)
 <br>
 
