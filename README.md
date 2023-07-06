@@ -1,6 +1,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/not-a-bug-a-feature.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=blue" height=35 width=110>
 
 <br>
 
@@ -280,6 +281,8 @@ Ethical hackers are expected to report all the vulnerabilities and weakness foun
 </tr>
 </tbody>
 </table>
+
+# Ultimate List of Linux kali lunix 
 
 ## Command History
 
