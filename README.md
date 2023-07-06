@@ -280,3 +280,149 @@ Ethical hackers are expected to report all the vulnerabilities and weakness foun
 </tr>
 </tbody>
 </table>
+
+## Command History
+
+```bash
+history                                # View all previous commands
+history 3                              # View the last 3 executed commands
+history -d 99                          # Clear a command from a specific line 
+history -c                             # Clears all history commands
+!!                                     # Run the last command executed
+```
+
+## Navigating Directories
+ ``` bash
+pwd                       # Print current directory path
+ls                        # List directories
+ls -a|--all               # List directories including hidden
+ls -l                     # List directories in long form
+ls -l -h|--human-readable # List directories in long form with human readable sizes
+ls -t                     # List directories by modification time, newest first
+
+cd foo                    # Go to foo sub-directory
+cd                        # Go to home directory
+cd ~                      # Go to home directory
+cd -                      # Go to the previously chosen directory
+```
+## Creating Directories 
+
+```bash
+mkdir foo                        # Create a directory
+mkdir foo bar                    # Create multiple directories
+
+## Deleting Directories
+
+```bash
+rmdir foo                        # Delete non-empty directory
+rm -r|--recursive foo            # Delete directory including contents
+```
+
+## Creating Files
+
+```bash
+touch foo.txt          # Create file or update existing files modified timestamp
+touch foo.txt bar.txt  # Create multiple files
+touch {foo,bar}.txt    # Create multiple files
+touch test{1..3}       # Create test1, test2 and test3 files
+touch test{a..c}       # Create testa, testb and testc files
+
+mktemp                 # Create a temporary file
+```
+## Moving and Copy files 
+
+```bash
+cp foo.txt bar.txt                                 # Copy file [cp file name spece destination]
+mv foo.txt bar.txt                                 # Move file
+```
+
+## Reading Files
+
+```bash
+cat foo.txt              # Print all contents
+nano                              # Open a new file in nano
+nano foo.txt                      # Open a specific file
+```
+
+## Finding Files
+
+Find binary files for a command.
+
+```bash
+type -a wget                              # Display all locations of executable
+which -a wget                             # Display all locations of executables 
+```
+
+## update and upgrade
+
+```bash
+apt update                          # Refreshes repository index
+apt upgrade                         # Upgrades all upgradable packages
+apt clean                           # Clears out the local repository of 
+```
+## Shutdown and Reboot
+
+```bash
+shutdown                     # Shutdown in 1 minute
+shutdown now                 # Immediately shut down
+shutdown +5                  # Shutdown in 5 minutes
+
+shutdown -r|--reboot         # Reboot in 1 minute (" | " mean " or " )
+shutdown -r|--reboot now     # Immediately reboot
+shutdown -r|--reboot +5      # Reboot in 5 minutes
+shutdown -c                  # Cancel a shutdown or reboot
+
+reboot                       # Reboot now
+reboot -f                    # Force a reboot
+```
+
+## User Management
+
+```bash
+sudo su                                            # Switch to root user
+sudo foo                                           # Execute commands(has permission denied) as the root user
+sudo nano /foo/foo.txt                             # Open directories and files(is not writable) as the root user
+su username                                        # Switch to a different user
+
+passwd                                             # To change the password of a user
+adduser username                                   # To add a new user
+userdel username                                   # To remove user
+userdel -r|--remove username                       # To remove user with home directory and mail spool
+usermod -a|--append -G|--groups GROUPNAME USERNAME # To add a user to a group
+deluser USER GROUPNAME                             # To remove a user from a group
+
+last                                               # Display information of all the users logged in
+last username                                      # Display information of a particular user
+w                                                  # Display who is online
+```
+
+## Network Troubleshooting
+
+```bash
+ifconfig                     # Display all network card and interface information 
+ifconfig -a                  # Display information of all network cards (including those that are not started at boot) 
+ifconfig eth0                # Display specific device information 
+ifconfig eth0 up             # Turn on the network card
+ifconfig eth0 down           # Turn off the network card
+ifconfig eth0 192.168.120.56 # Configure IP address for network card
+
+
+ping example.com             # Send multiple ping requests using the ICMP protocol
+ping -c 10 -i 5 example.com  # Make 10 attempts, 5 seconds apart
+
+ip addr                      # List IP addresses on the system
+ip route show                # Show IP addresses to router
+ 
+netstat -i|--interfaces      # List all network interfaces and in/out usage
+netstat -l|--listening       # List all open ports
+
+traceroute example.com       # List all servers the network traffic goes through
+
+mtr -w|--report-wide example.com                                    # Continually list all servers the network traffic goes through
+mtr -r|--report -w|--report-wide -c|--report-cycles 100 example.com # Output a report that lists network traffic 100 times
+
+nmap 0.0.0.0                 # Scan for the 1000 most common open ports on localhost
+nmap 0.0.0.0 -p1-65535       # Scan for open ports on localhost between 1 and 65535
+nmap 192.168.4.3             # Scan for the 1000 most common open ports on a remote IP address
+nmap -sP 192.168.1.1/24      # Discover all machines on the network by ping'ing them
+```
