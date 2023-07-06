@@ -63,7 +63,7 @@ Ethical hackers are expected to report all the vulnerabilities and weakness foun
 10) [Malware attack](https://blog.netwrix.com/2018/05/15/top-10-most-common-types-of-cyber-attacks/#Malware%20attack) &nbsp; <br>
 -->
 
-# Ultimate List of Linux kali lunix 
+# Ultimate List of kali lunix Commands 
 
 ## Command History
 
